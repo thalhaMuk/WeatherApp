@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(../public/assests/img/header.png) no-repeat, rgb(30, 32, 39);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.logo {
+  width: 60px;
+  height: 50px;
+}
+
+.stack-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.weather-app-title {
+  color: white;
+  font-weight: 500;
+  padding-left: 10px;
 }

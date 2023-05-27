@@ -1,0 +1,140 @@
+.WeatherCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WeatherContainer {
+    width: 80%;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #378de7;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 30px;
+    padding-top: 50px;
+}
+
+.WeatherTopContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
+}
+
+.WeatherTopLeftContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding-right: 15%;
+}
+
+
+.WeatherBack{
+    top: -20px;
+    left: 20px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.WeatherTopRightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+}
+
+
+.WeatherHeading {
+    font-size: 40px;
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-weight: 400;
+}
+
+.WeatherIcon{
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.BottomMiddleContainer{
+    font-size: 20px;
+}
+
+.WeatherTinyText {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.WeatherBigText {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 768px) {
+    .WeatherContainer {
+        width: 420px;
+        height: 280px;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .WeatherTopLeftContainer{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+   .WeatherTopRightContainer {
+        padding-left: 10%;
+    }
+    .WeatherBack{
+        top: -5px;
+        left: 15px;
+    }
+
+    .WeatherTopContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
+    }
+
+    .WeatherTinyText{
+        font-size: 12px;
+    }
+
+    .BottomMiddleContainer{
+    font-size: 10px;
+    }
+ 
+    .WeatherHeading {
+        font-size: 30px;
+    }
+
+    .WeatherIcon{
+        font-size: 50px;
+    }
+
+    .WeatherBigText {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,134 @@
+  .box-container {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 40px;
+      margin: 0 auto;
+  }
+
+  .inner-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+  }
+
+  .stack-row-2 {
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      margin-top: 10px;
+  }
+
+  .cus-text-field {
+      color: #ffffff;
+      font-size: 15px;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      height: 20px;
+      background-color: #212121;
+  }
+
+  .cus-text-field input::placeholder {
+      color: #f5f5f5;
+  }
+
+  .color-button {
+      color: #ffffff;
+      font-size: 14px;
+      width: 30%;
+      background-color: #3f51b5;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .color-button:hover {
+      background-color: #303f9f;
+  }
+
+  .color-button:focus {
+      outline: none;
+  }
+
+  .color-button:active {
+      transform: scale(0.98);
+  }
+
+  .color-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      opacity: 0;
+  }
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: 10px;
+      justify-items: center;
+      margin-top: 10px;
+  }
+
+
+
+  @media screen and (min-width: 1100px) {
+      .box-container {
+          width: 90%;
+          overflow: hidden;
+      }
+
+      .grid-container {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 728px) {
+      .box-container {
+          width: 90%;
+          padding-left: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .stack-row-2 {
+          width: 100%;
+      }
+
+      .grid-container {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+  }
+
+  @media screen and (max-width: 728px) {
+      .box-container {
+          width: 90%;
+          padding-left: 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          /* Center items horizontally */
+          align-items: center;
+          /* Center items vertically */
+      }
+
+      .stack-row-2 {
+          width: 90%;
+      }
+
+      .grid-container {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+  }

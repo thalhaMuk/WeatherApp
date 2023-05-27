@@ -1,0 +1,84 @@
+  .Container {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin: 30px;
+    background-image: url('../../public/assests/img/cloud.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 30px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .Container {
+      width: 420px;
+      height: 280px;
+    }
+  }
+
+  .TopContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .BottomContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #383b47;
+  }
+
+
+
+  .TopLeftContainer,
+  .TopRightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .BottomLeftContainer .BottomRightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .BottomMiddleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Heading {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .TinyText {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+  }
+
+  .BigText {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+  }
