@@ -1,392 +1,467 @@
 .WeatherCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .WeatherContainerCard {
-    width: 60%;
-    height: 500px;
-    border-radius: 5px;
-    background-color: #378de7;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin: 20px auto;
-    padding-top: 50px;
+  width: 60%;
+  height: 500px;
+  border-radius: 5px;
+  background-color: #378de7;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin: 20px auto;
+  padding-top: 50px;
 }
 
 .WeatherBack {
-    top: -20px;
-    left: 20px;
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+  top: -20px;
+  left: 20px;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .CardBottomContainer {
-    width: 100%;
-    height: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #383b47;
-    padding: 0;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #383b47;
+  padding: 0;
 }
 
 .CardBottomLeftContainer,
 .CardBottomMiddleContainer,
 .CardBottomRightContainer {
-    padding: 75px;
+  padding: 75px;
 }
 
 .CardBottomMiddleContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .PlaneIcon {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .WeatherTopContainerCard {
-    width: 50%;
-    height: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    background: linear-gradient(#fff, #fff) no-repeat center/0.75px 60%;
+  width: 50%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(#fff, #fff) no-repeat center/0.75px 60%;
 }
 
 .WeatherTopLeftContainerCard {
-    margin: 0 auto !important;
+  margin: 0 auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .WeatherTopRightContainerCard {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .WeatherHeadingCard {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
 }
 
 .WeatherIconCard .WeatherIcon {
-    font-size: 50px !important;
+  font-size: 50px !important;
 }
 
-
 .WeatherTinyText .WeatherTemp {
-    padding: 20px !important;
+  padding: 20px !important;
 }
 
 .CardBottomMiddleContainer {
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .WeatherTinyText {
-    font-size: 18px;
-    margin: 0;
-    padding: 5px 0 5px 0;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: capitalize;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: capitalize;
 }
 
 .WeatherTinyText .WeatherDesc {
-    letter-spacing: 1px;
-    padding: 100px !important;
+  letter-spacing: 1px;
+  padding: 100px !important;
 }
-
 
 .WeatherBigTextCard {
-    font-size: 60px;
-    margin: 0;
-    padding: 0 0 10px 0;
-    font-weight: 500;
-    line-height: 1.5;
+  font-size: 60px;
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-
 @media screen and (max-width: 1600px) {
-    .WeatherContainerCard {
-        width: 900px;
-        height: 500px;
-        margin-top: 20px;
-        padding-top: 20px;
-    }
+  .WeatherContainerCard {
+    width: 900px;
+    height: 500px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 
-    .WeatherTopContainerCard {
-        background: linear-gradient(#fff, #fff) no-repeat center/1px 60% !important;
-    }
+  .WeatherTopContainerCard {
+    background: linear-gradient(#fff, #fff) no-repeat center/1px 60% !important;
+  }
 
-    .headerDividerTop {
-        height: 70%;
-        padding: 1%;
-        margin: 10%;
-    }
+  .headerDividerTop {
+    height: 70%;
+    padding: 1%;
+    margin: 10%;
+  }
 
-    .WeatherIconCard .WeatherIcon {
-        font-size: 50px !important;
-    }
+  .WeatherIconCard .WeatherIcon {
+    font-size: 50px !important;
+  }
 
+  .WeatherTinyText {
+    font-size: 17px !important;
+    font-weight: 400;
+  }
 
-    .WeatherTinyText {
-        font-size: 18px !important;
-        font-weight: 400;
-    }
+  .WeatherBack {
+    top: -5px;
+    left: 15px;
+  }
 
-    .WeatherBack {
-        top: -5px;
-        left: 15px;
-    }
+  .WeatherTopContainerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
+  }
 
-    .WeatherTopContainerCard {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
-    }
+  .CardBottomMiddleContainer {
+    font-size: 10px;
+  }
 
-    .CardBottomMiddleContainer {
-        font-size: 10px;
-    }
+  .WeatherHeadingCard {
+    font-size: 30px !important;
+  }
 
-    .WeatherHeadingCard {
-        font-size: 30px !important;
-    }
+  .WeatherBigTextCard {
+    font-size: 50px !important;
+  }
 
-    .WeatherBigTextCard {
-        font-size: 50px !important;
-    }
+  .CardBottomContainer {
+    justify-content: space-between !important;
+  }
 
-    .CardBottomContainer {
-        justify-content: space-between !important;
-    }
+  .CardBottomLeftContainer {
+    padding: 50px 0 50px 50px !important;
+  }
 
-    .CardBottomLeftContainer {
-        padding: 50px 0 50px 50px !important;
-    }
+  .CardBottomMiddleContainer {
+    padding: 50px 0 50px 0 !important;
+  }
 
-    .CardBottomMiddleContainer {
-        padding: 50px 0 50px 0 !important;
-    }
+  .CardBottomRightContainer {
+    padding: 50px 50px 50px 0 !important;
+  }
+}
 
-    .CardBottomRightContainer {
-        padding: 50px 50px 50px 0 !important;
-    }
+@media screen and (max-width: 920px) {
+  .WeatherContainerCard {
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .WeatherTopContainerCard {
+    background: none !important;
+  }
+
+  .headerDividerTop {
+    border-left: 1px solid white;
+    height: 70%;
+    padding: 1%;
+    margin: 10%;
+  }
+
+  .WeatherIconCard .WeatherIcon {
+    font-size: 40px !important;
+  }
+
+  .WeatherTinyText {
+    font-size: 15px !important;
+    font-weight: 400;
+  }
+
+  .WeatherBack {
+    top: -5px;
+    left: 15px;
+  }
+
+  .WeatherTopContainerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
+  }
+
+  .CardBottomMiddleContainer {
+    font-size: 10px;
+  }
+
+  .WeatherHeadingCard {
+    font-size: 30px !important;
+  }
+
+  .WeatherBigTextCard {
+    font-size: 45px !important;
+  }
+
+  .CardBottomContainer {
+    justify-content: space-between !important;
+  }
+
+  .CardBottomLeftContainer {
+    padding: 50px 0 50px 50px !important;
+  }
+
+  .CardBottomMiddleContainer {
+    padding: 50px 0 50px 0 !important;
+  }
+
+  .CardBottomRightContainer {
+    padding: 50px 50px 50px 0 !important;
+  }
 }
 
 @media screen and (max-width: 825px) {
-    .WeatherContainerCard {
-        width: 600px;
-        height: 280px;
-        margin-top: 20px;
-        padding-top: 20px;
-    }
+  .WeatherContainerCard {
+    width: 700px;
+    height: 380px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 
-    .WeatherTopContainerCard {
-        background: none !important;
-    }
+  .WeatherTopContainerCard {
+    background: none !important;
+  }
 
-    .headerDividerTop {
-        border-left: 1px solid white;
-        height: 70%;
-        padding: 1%;
-        margin: 10%;
-    }
+  .headerDividerTop {
+    border-left: 1px solid white;
+    height: 70%;
+    padding: 1%;
+    margin: 10%;
+  }
 
-    .WeatherIconCard .WeatherIcon {
-        font-size: 30px !important;
-    }
+  .WeatherIconCard .WeatherIcon {
+    font-size: 40px !important;
+  }
 
+  .WeatherTinyText {
+    font-size: 15 px !important;
+    font-weight: 400;
+  }
 
-    .WeatherTinyText {
-        font-size: 13px !important;
-        font-weight: 400;
-    }
+  .WeatherBack {
+    top: -5px;
+    left: 15px;
+  }
 
-    .WeatherBack {
-        top: -5px;
-        left: 15px;
-    }
+  .WeatherTopContainerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
+  }
 
-    .WeatherTopContainerCard {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
-    }
+  .CardBottomMiddleContainer {
+    font-size: 10px;
+  }
 
-    .CardBottomMiddleContainer {
-        font-size: 10px;
-    }
+  .WeatherHeadingCard {
+    font-size: 30px !important;
+  }
 
-    .WeatherHeadingCard {
-        font-size: 30px !important;
-    }
+  .WeatherBigTextCard {
+    font-size: 45px !important;
+  }
 
-    .WeatherBigTextCard {
-        font-size: 25px !important;
-    }
+  .CardBottomContainer {
+    justify-content: space-between !important;
+  }
 
-    .CardBottomContainer {
-        justify-content: space-between !important;
-    }
+  .CardBottomLeftContainer {
+    padding: 25px 0 25px 25px !important;
+  }
 
-    .CardBottomLeftContainer {
-        padding: 50px 0 50px 50px !important;
-    }
+  .CardBottomMiddleContainer {
+    padding: 25px 0 25px 0 !important;
+  }
 
-    .CardBottomMiddleContainer {
-        padding: 50px 0 50px 0 !important;
-    }
+  .CardBottomRightContainer {
+    padding: 25px 25px 25px 0 !important;
+  }
 
-    .CardBottomRightContainer {
-        padding: 50px 50px 50px 0 !important;
-    }
+  .PlaneIcon {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .WeatherContainerCard {
+    width: 500px;
+    height: 280px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .WeatherTopContainerCard {
+    background: none !important;
+  }
+
+  .headerDividerTop {
+    border-left: 1px solid white;
+    height: 70%;
+    padding: 1%;
+    margin: 10%;
+  }
+
+  .WeatherIconCard .WeatherIcon {
+    font-size: 25px !important;
+  }
+
+  .WeatherTinyText {
+    font-size: 11px !important;
+  }
+
+  .CardBottomMiddleContainer {
+    font-size: 10px;
+  }
+
+  .WeatherHeadingCard {
+    font-size: 25px !important;
+  }
+
+  .WeatherBigTextCard {
+    font-size: 40px !important;
+  }
+
+  .CardBottomContainer {
+    justify-content: space-between !important;
+  }
+
+  .CardBottomLeftContainer {
+    padding: 10px 0 10px 10px !important;
+  }
+
+  .CardBottomMiddleContainer {
+    padding: 10px 0 10px 0 !important;
+  }
+
+  .CardBottomRightContainer {
+    padding: 10px 10px 10px 0 !important;
+  }
 }
 
 @media screen and (max-width: 510px) {
-    .WeatherContainerCard {
-        width: 475px;
-        height: 280px;
-        margin-top: 20px;
-        padding-top: 20px;
-    }
+  .WeatherContainerCard {
+    width: 300px;
+    height: 225px;
+    margin-top: 20px;
+    padding-top: 20px;
+    justify-content: center;
+  }
 
-    .WeatherTopContainerCard {
-        background: none !important;
-    }
+  .headerDividerTop {
+    border-left: 1px solid white;
+    height: 90%;
+    padding: 1%;
+    margin: 10%;
+  }
 
-    .headerDividerTop {
-        border-left: 1px solid white;
-        height: 70%;
-        padding: 1%;
-        margin: 10%;
-    }
+  .WeatherBack {
+    left: -120px;
+    top: 30px;
+    width: 5%;
+  }
 
-    .WeatherIconCard .WeatherIcon {
-        font-size: 40px !important;
-    }
+  .WeatherIconCard .WeatherIcon {
+    font-size: 20px !important;
+  }
 
+  .WeatherTinyText {
+    font-size: 9px !important;
+    padding: 2px 0px;
+  }
 
-    .WeatherTinyText {
-        font-size: 14px !important;
-        font-weight: 400;
-    }
+  .CardBottomMiddleContainer {
+    font-size: 10px;
+  }
 
-    .WeatherBack {
-        top: -5px;
-        left: 15px;
-    }
+  .WeatherHeadingCard {
+    padding-top: 20px;
+    font-size: 20px !important;
+  }
 
-    .WeatherTopContainerCard {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(#fff, #fff) no-repeat center/0.5px 70%;
-    }
-
-    .CardBottomMiddleContainer {
-        font-size: 10px;
-    }
-
-    .WeatherHeadingCard {
-        font-size: 30px !important;
-    }
-
-    .WeatherBigTextCard {
-        font-size: 25px !important;
-    }
-
-    .CardBottomContainer {
-        justify-content: space-between !important;
-    }
-
-    .CardBottomLeftContainer {
-        padding: 25px 0 25px 25px !important;
-    }
-
-    .CardBottomMiddleContainer {
-        padding: 25px 0 25px 0 !important;
-    }
-
-    .CardBottomRightContainer {
-        padding: 25px 25px 25px 0 !important;
-    }
-
-    .PlaneIcon {
-        font-size: 15px;
-    }
+  .WeatherBigTextCard {
+    font-size: 30px !important;
+  }
 }
 
-@media screen and (max-width: 500px) {
-    .WeatherContainerCard {
-        width: 475px;
-        height: 280px;
-        margin-top: 20px;
-        padding-top: 20px;
-    }
+@media screen and (max-width: 410px) {
+  .WeatherContainerCard {
+    width: 275px;
+    height: 140px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 
-    .WeatherTopContainerCard {
-        background: none !important;
-    }
+  .headerDividerTop {
+    height: 100%;
+  }
 
-    .headerDividerTop {
-        border-left: 1px solid white;
-        height: 70%;
-        padding: 1%;
-        margin: 10%;
-    }
+  .WeatherIconCard .WeatherIcon {
+    font-size: 20px !important;
+  }
 
-    .WeatherIconCard .WeatherIcon {
-        font-size: 30px !important;
-    }
+  .WeatherTinyText {
+    font-size: 7px !important;
+    padding: 1px 0px;
+  }
 
+  .CardBottomMiddleContainer {
+    font-size: 8px;
+  }
 
-    .WeatherTinyText {
-        font-size: 11px !important;
-    }
+  .WeatherHeadingCard {
+    font-size: 15px !important;
+  }
 
-    .CardBottomMiddleContainer {
-        font-size: 10px;
-    }
-
-    .WeatherHeadingCard {
-        font-size: 25px !important;
-    }
-
-    .WeatherBigTextCard {
-        font-size: 30px !important;
-    }
-
-    .CardBottomContainer {
-        justify-content: space-between !important;
-    }
-
-    .CardBottomLeftContainer {
-        padding: 10px 0 10px 10px !important;
-    }
-
-    .CardBottomMiddleContainer {
-        padding: 10px 0 10px 0 !important;
-    }
-
-    .CardBottomRightContainer {
-        padding: 10px 10px 10px 0 !important;
-    }
-
+  .WeatherBigTextCard {
+    font-size: 20px !important;
+  }
 }

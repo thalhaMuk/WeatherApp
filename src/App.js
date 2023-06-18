@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Weather from "./pages/Weather.js";
 
-import './styles/App.css';
+import "./styles/App.css";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/:cityId" element={<Weather />} />
         </Routes>
       </Router>
-      <div className='footer'>
+      <div className="footer">
         <footer>2021 Fidenz Technologies</footer>
       </div>
     </div>

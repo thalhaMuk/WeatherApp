@@ -1,147 +1,265 @@
+.Container {
+  width: 500px;
+  height: 300px;
+  padding: 25px 10px 0 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: 30px;
+  background-color: #837960;
+  background-image: linear-gradient(to bottom, transparent, #837960),
+    url("../../public/assests/img/cloud.png");
+  background-repeat: no-repeat;
+  background-size: 550px;
+  background-position: 0px 50px;
+  cursor: pointer;
+}
+
+.TopContainer {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.BottomContainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #383b47;
+}
+
+.TopLeftContainer,
+.TopRightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.BottomLeftContainer .BottomRightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerDivider {
+  border-left: 1px solid #505466;
+  height: 40%;
+}
+
+.BottomMiddleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Heading {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.WeatherDesc {
+  padding: 15px 0 30px 0 !important;
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.WeatherIcon {
+  font-size: 25px !important;
+  padding-right: 10px !important;
+  padding-left: 25px !important;
+}
+
+.Time {
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+.Temp {
+  padding-bottom: 40px !important;
+  padding-top: 20px !important;
+}
+
+.TinyText {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.BigText {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 750px) {
   .Container {
-    width: 500px;
-    height: 300px;
-    padding: 25px 10px 0 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    margin: 30px;
-    background-color: #837960;
-    background-image: linear-gradient(to bottom, transparent, #837960), url('../../public/assests/img/cloud.png');
-    background-repeat: no-repeat;
-    background-size: 550px;
-    background-position: 0px 50px;
-    cursor: pointer;
+    width: 450px;
+    height: 280px;
   }
+}
 
-  @media (max-width: 768px) {
-    .Container {
-      width: 420px;
-      height: 280px;
-    }
-  }
-
-  @media (max-width: 415px) {
-    .Container {
-      width: 400px;
-      height: 280px;
-      padding: 0 !important;
-    }
-
-    .BottomContainer {
-      padding: 0 !important;
-
-    }
-
-    .TinyText {
-      font-size: 12px !important;
-    }
-
-    .Heading {
-      font-size: 25px !important;
-      letter-spacing: 0px !important;
-    }
-
-    .BigText {
-      font-size: 40px !important;
-      padding-bottom: 25px !important;
-
-    }
-  }
-
-  .TopContainer {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+@media (max-width: 500px) {
+  .Container {
+    width: 400px;
+    height: 260px;
+    padding: 0 !important;
   }
 
   .BottomContainer {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    padding: 0 10px 0 10px;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #383b47;
+    padding: 0 !important;
   }
 
-
-
-  .TopLeftContainer,
-  .TopRightContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .BottomLeftContainer .BottomRightContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .headerDivider {
-    border-left: 1px solid #505466;
-    height: 40%;
-  }
-
-  .BottomMiddleContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .TinyText {
+    font-size: 12px !important;
   }
 
   .Heading {
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 20px !important;
+    letter-spacing: 0px !important;
   }
 
   .WeatherDesc {
-    padding: 20px 0 30px 0 !important;
-    font-weight: 500 !important;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-
+    padding: 10px 0 20px 0 !important;
   }
 
-  .WeatherIcon {
-    font-size: 25px !important;
-    padding-right: 10px !important;
-    padding-left: 25px !important;
+  .BigText {
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .Container {
+    width: 350px;
+    height: 230px;
+    padding: 0 !important;
+    justify-content: flex-end;
+    margin: 30px 30px 0 0px !important;
   }
 
-  .Time {
-    padding-bottom: 20px;
-    padding-top: 5px;
+  .TopContainer {
+    align-items: flex-end;
+  }
+
+  .WeatherDesc {
+    padding: 0px 0 20px 0 !important;
   }
 
   .Temp {
-    padding-bottom: 30px !important;
+    padding-bottom: 25px !important;
     padding-top: 20px !important;
   }
 
   .TinyText {
-    font-size: 15px;
-    margin: 0;
-    font-weight: 400;
+    font-size: 10px !important;
   }
 
+  .Heading {
+    font-size: 17px !important;
+    letter-spacing: 0px !important;
+  }
 
   .BigText {
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
+    font-size: 35px !important;
   }
+}
+
+@media (max-width: 400px) {
+  .Container {
+    width: 350px;
+    height: 200px;
+    padding: 0 !important;
+    margin: 15px 30px 0 30px !important;
+  }
+
+  .BottomContainer {
+    padding: 0 !important;
+  }
+
+  .TinyText {
+    font-size: 9px !important;
+  }
+
+  .Heading {
+    font-size: 15px !important;
+    letter-spacing: 0px !important;
+  }
+
+  .BigText {
+    font-size: 30px !important;
+  }
+
+  .WeatherDesc {
+    padding: 0px 0 20px 0 !important;
+  }
+
+  .Temp {
+    padding-bottom: 25px !important;
+    padding-top: 20px !important;
+  }
+
+  .TopContainer {
+    margin-top: 10px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .Container {
+    width: 250px;
+    height: 150px;
+    margin: 15px 30px 0 10px !important;
+  }
+
+  .TinyText {
+    font-size: 7px !important;
+  }
+
+  .Heading {
+    font-size: 12px !important;
+  }
+
+  .BigText {
+    font-size: 24px !important;
+  }
+
+  .Temp {
+    padding-bottom: 15px !important;
+    padding-top: 25px !important;
+  }
+
+  .WeatherDesc {
+    padding: 0px 0 10px 0 !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .TopContainer {
+    margin-top: 10px !important;
+  }
+
+  .WeatherIcon {
+    font-size: 15px !important;
+    padding-bottom: 5px;
+  }
+}

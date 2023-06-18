@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { weatherIcons, formatWeatherDateTime } from '../utils/constants';
 import { faPaperPlane, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from 'react-router-dom';
-import '../styles/Weather.css'
+import { useNavigate } from "react-router-dom";
+import { weatherIcons } from "../utils/constants";
+import { formatWeatherDateTime } from "../utils/utils";
+
+import "../styles/Weather.css";
 
 const Weather = () => {
   const { cityId } = useParams();
@@ -44,27 +46,24 @@ const Weather = () => {
           <h3 className="WeatherHeadingCard">
             {weatherData.name}, {weatherData.sys.country}
           </h3>
-          <h3 className="WeatherTinyText">
-            {formattedDateTime}
-          </h3>
+          <h3 className="WeatherTinyText">{formattedDateTime}</h3>
           <div className="WeatherTopContainerCard">
             <div className="WeatherTopLeftContainerCard">
-              <h3 className="WeatherIconCard" >
-                {weatherIcon}
-              </h3>
+              <h3 className="WeatherIconCard">{weatherIcon}</h3>
               <h3 className="WeatherTinyText WeatherDesc">
                 {weatherData.weather[0].description}
               </h3>
             </div>
             <div className="headerDividerTop"></div>
 
-
             <div className="WeatherTopRightContainerCard">
-              <h3 className="WeatherBigTextCard">{weatherData.main.temp}&deg;c</h3>
+              <h3 className="WeatherBigTextCard">
+                {weatherData.main.temp}&deg;c
+              </h3>
               <h3 className="WeatherTinyText WeatherTemp">
                 Temp Min: {weatherData.main.temp_min} &deg;C
               </h3>
-              <h3 className="WeatherTinyText WeatherTemp" >
+              <h3 className="WeatherTinyText WeatherTemp">
                 Temp Max: {weatherData.main.temp_max} &deg;C
               </h3>
             </div>
@@ -76,7 +75,8 @@ const Weather = () => {
                 <strong>Pressure:</strong> {weatherData.main.pressure}hPa <br />
               </h3>
               <h3 className="WeatherTinyText">
-                <strong>Humidity:</strong> {weatherData.main.humidity} &deg;C <br />
+                <strong>Humidity:</strong> {weatherData.main.humidity} &deg;C{" "}
+                <br />
               </h3>
               <h3 className="WeatherTinyText">
                 <strong>Visibility:</strong> {weatherData.visibility} %
@@ -85,7 +85,8 @@ const Weather = () => {
             <div className="headerDivider"></div>
 
             <div className="CardBottomMiddleContainer">
-              <FontAwesomeIcon className="PlaneIcon" icon={faPaperPlane} /> <br />
+              <FontAwesomeIcon className="PlaneIcon" icon={faPaperPlane} />{" "}
+              <br />
               <h3 className="WeatherTinyText">
                 {weatherData.wind.speed} m/s {weatherData.wind.deg} Degree
               </h3>
@@ -94,13 +95,13 @@ const Weather = () => {
 
             <div className="CardBottomRightContainer">
               <h3 className="WeatherTinyText">
-                <strong>Sunrise:{" "}</strong>
+                <strong>Sunrise: </strong>
                 {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString(
                   "en-IN"
                 )}{" "}
               </h3>
-              <h3 className="WeatherTinyText" >
-                <strong>Sunset:{" "}</strong>
+              <h3 className="WeatherTinyText">
+                <strong>Sunset: </strong>
                 {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
                   "en-IN"
                 )}
