@@ -12,15 +12,15 @@ export default function Home() {
           <button className="color-button">Add City</button>
         </div>
         <div className="grid-container">
-          {weatherData.List.map((city, i) => (
-            <div className="Cards">
+          {weatherData.List.map((city) => (
+            <div className="Cards" key={city.CityCode}>
               <WeatherCard
-                key={city.CityCode}
                 cityId={city.CityCode}
                 cityName={city.CityName}
+                cityTtl={city.ttl}
               />
             </div>
-          ))}{" "}
+          ))}
         </div>
       </div>
     </div>

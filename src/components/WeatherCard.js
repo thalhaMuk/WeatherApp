@@ -13,39 +13,50 @@ export default function WeatherCard(props) {
   const [randomColor, setRandomColor] = useState([]);
   const navigate = useNavigate();
   const cityID = props.cityId;
+  const ttl = props.cityTtl;
   let weatherIcon = null;
 
   useEffect(() => {
     fetchDataAndSetExpiry();
+    const cacheCleanupInterval = setInterval(checkCacheExpiry, 1000);
+    return () => clearInterval(cacheCleanupInterval);
   }, []);
 
-  function setWithExpiry(key, value) {
-    const ttl = 300000; // 5 minutes
-    const now = new Date();
-    const item = {
-      value: value,
-      expiry: now.getTime() + ttl,
-    };
-    localStorage.setItem(key, JSON.stringify(item));
-  }
+  const checkCacheExpiry = () => {
+    const currentTime = new Date().getTime();
+    const dataFromLocalStorage = localStorage.getItem(cityID);
+    if (dataFromLocalStorage) {
+      const obj = JSON.parse(dataFromLocalStorage);
+      if (obj.expiryTime && currentTime >= obj.expiryTime) {
+        localStorage.removeItem(cityID);
+      }
+    }
+  };
 
   const fetchDataAndSetExpiry = async () => {
-    let dataFromLocalStorage = localStorage.getItem(`${cityID}`);
+    let dataFromLocalStorage = localStorage.getItem(cityID);
     let obj = dataFromLocalStorage ? JSON.parse(dataFromLocalStorage) : null;
-    if (typeof obj?.value == "undefined") {
+    const currentTime = new Date().getTime();
+
+    if (obj && obj.expiryTime && currentTime < obj.expiryTime) {
+      setWeatherData(obj.value);
+    } else {
       try {
         const result = await getWeatherDataWithId(cityID);
         setWeatherData(result);
-        if (typeof result.main !== "undefined") {
-          setWithExpiry(`${cityID}`, result);
-          dataFromLocalStorage = localStorage.getItem(cityID);
-          obj = JSON.parse(dataFromLocalStorage);
+
+        const ttlInSeconds = parseInt(ttl, 10);
+        if (!isNaN(ttlInSeconds) && typeof result.main !== "undefined") {
+          const expiryTime = currentTime + ttlInSeconds;
+          const dataToCache = {
+            value: result,
+            expiryTime: expiryTime,
+          };
+          localStorage.setItem(cityID, JSON.stringify(dataToCache));
         }
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
-    } else {
-      setWeatherData(obj.value);
     }
     setRandomColor("#" + Math.floor(Math.random() * 16777215).toString(16));
   };
