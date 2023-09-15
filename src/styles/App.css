@@ -10,12 +10,40 @@ html {
   justify-content: center;
 }
 
+.stack-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  width: 75%;
+}
+
+.weather-app-title {
+  color: white;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.Divider {
+  height: 80%;
+}
+
 .footer {
   padding-bottom: 60px;
+  background-color: #2f333d; 
 }
 
 footer {
-  background-color: #2f333d;
   color: #909297;
   position: absolute;
   left: 0;
@@ -25,4 +53,50 @@ footer {
   display: block;
   padding: 20px;
   text-align: center;
+}
+
+.user-auth-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px; 
+}
+
+.userName {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.login,
+.logout {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  color: #fff;
+}
+
+.login{
+  background-color: #007bff;
+}
+
+.logout{
+  background-color: #ec392d;
+}
+
+.logout:hover{
+  background-color: #a0271f;
+}
+
+.login:hover {
+  background-color: #0056b3;
+}
+
+.login-message {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
 }

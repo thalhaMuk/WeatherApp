@@ -16,22 +16,3 @@ code {
   width: 60px;
   height: 50px;
 }
-
-.stack-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 5px;
-}
-
-.weather-app-title {
-  color: white;
-  font-weight: 500;
-  padding-left: 10px;
-}
-
-.Divider {
-  height: 80%;
-}
