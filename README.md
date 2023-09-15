@@ -8,4 +8,5 @@ This project is a front-end assignment for Fidenz Technologies. The goal of the 
 | Call openweathermap.org APIs   | ✅             |
 | Create UI based on design  | ✅             |
 | Implement data caching     | ✅             |
-| Dockarize the              | ✅             |
+| Dockarize the app              | ✅             |
+| Authentication With Auth0              | ✅             |
